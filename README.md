@@ -14,6 +14,7 @@ installer.sh			::		An Installer for the header files and
 
 List of implementations planned :: 
 Basics ( Data Structures ~)
+Graph Algorithms
 Algorithms( Binary Search, Selection Sort, Bubble Sort, Insertion Sort, Merge Sort,Heap Sort, QuickSort, Bucket Sort, ShellSort )
 Hashing( Some standard widely used hashing algorithms )
 Misc implementaions ( Polynomial / matrix/priority queue Etc.. Etc ..)
