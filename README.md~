@@ -8,25 +8,25 @@ Our Project is an extensive collection of implementations of a lot of Data struc
 
 ## Installation
 
-<pre>
 Download the file: https://github.com/isthegeek/algorithms/archive/master.zip
 
 Now extract the file
-<code>unzip algorithms-master.zip</code>
+`unzip algorithms-master.zip`
 
 Change directory to the algorithms folder
-<code>cd algorithms-master</code>
+`cd algorithms-master`
 
 Now make the file
-<code>make</code>
+`make`
 
 Now you can run the executable
-<code>./csd201</code>
-</pre>
+`./csd20<`
 
 ## Usage
 
-TODO: Write usage instructions
+Edit the src/main.c file
+
+Check out docs for more help!
 
 ## Contributing
 
@@ -42,8 +42,8 @@ TODO: Write history
 
 ## Credits
 
-TODO: Write credits
+Made with ♥ at Shiv Nadar University!
 
 ## License
 
-TODO: Write license
+MIT License

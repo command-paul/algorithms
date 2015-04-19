@@ -8,21 +8,19 @@ Our Project is an extensive collection of implementations of a lot of Data struc
 
 ## Installation
 
-<pre>
 Download the file: https://github.com/isthegeek/algorithms/archive/master.zip
 
 Now extract the file
-<code>unzip algorithms-master.zip</code>
+`unzip algorithms-master.zip`
 
 Change directory to the algorithms folder
-<code>cd algorithms-master</code>
+`cd algorithms-master`
 
 Now make the file
-<code>make</code>
+`make`
 
 Now you can run the executable
-<code>./csd201</code>
-</pre>
+`./csd201<`
 
 ## Usage
 
