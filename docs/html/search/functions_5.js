@@ -6,6 +6,5 @@ var searchData=
   ['test_5fquick_5fsort',['test_quick_sort',['../sort_8c.html#a40ee7a9a8baf8359d62c2bd233ef21fd',1,'sort.c']]],
   ['test_5fselection_5fsort',['test_selection_sort',['../sort_8c.html#a47f4e50402a9a8a0e821e2c4378fd1d9',1,'sort.c']]],
   ['test_5fshell_5fsort',['test_shell_sort',['../sort_8c.html#a51cfedc1338e8cae0384659bce30b858',1,'sort.c']]],
-  ['test_5fsuite',['test_suite',['../sort_8c.html#a21f4cc83d8db6357814da803b32bbc72',1,'sort.c']]],
-  ['todo_20list',['Todo List',['../todo.html',1,'']]]
+  ['test_5fsuite',['test_suite',['../sort_8c.html#a21f4cc83d8db6357814da803b32bbc72',1,'sort.c']]]
 ];

@@ -1,0 +1,262 @@
+\hypertarget{sort_8c}{\section{tests/sort.c File Reference}
+\label{sort_8c}\index{tests/sort.\-c@{tests/sort.\-c}}
+}
+{\ttfamily \#include \char`\"{}minunit.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../src/sort.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{sort_8c_aec576c05684bd98fee4f4286bc7d5f77}{test\-\_\-insertion\-\_\-sort} (void)
+\begin{DoxyCompactList}\small\item\em For testing the insertion sort. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{sort_8c_abf7135b332e21904828f9a3b3dba5f6e}{test\-\_\-merge\-\_\-sort} (void)
+\begin{DoxyCompactList}\small\item\em For testing the merge sort. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{sort_8c_a40ee7a9a8baf8359d62c2bd233ef21fd}{test\-\_\-quick\-\_\-sort} (void)
+\begin{DoxyCompactList}\small\item\em For testing the quick sort. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{sort_8c_af4428ddad54513b2da3d60173c8a75eb}{test\-\_\-bubble\-\_\-sort} (void)
+\begin{DoxyCompactList}\small\item\em For testing the bubble sort. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{sort_8c_a47f4e50402a9a8a0e821e2c4378fd1d9}{test\-\_\-selection\-\_\-sort} (void)
+\begin{DoxyCompactList}\small\item\em For testing the selection sort. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{sort_8c_a51cfedc1338e8cae0384659bce30b858}{test\-\_\-shell\-\_\-sort} (void)
+\begin{DoxyCompactList}\small\item\em For testing the shell sort. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{sort_8c_a21f4cc83d8db6357814da803b32bbc72}{test\-\_\-suite} (void)
+\begin{DoxyCompactList}\small\item\em The testing suite. Calls all the test functions. \end{DoxyCompactList}\item 
+\hypertarget{sort_8c_a0c99d968a34e803d378692bde2e3f18f}{int {\bfseries main} (int ac, char $\ast$$\ast$av)}\label{sort_8c_a0c99d968a34e803d378692bde2e3f18f}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{sort_8c_a91aa4203331e915f2d20dd26579791ee}{int {\bfseries tests\-\_\-run} = 0}\label{sort_8c_a91aa4203331e915f2d20dd26579791ee}
+
+\item 
+\hypertarget{sort_8c_acb559820d9ca11295b4500f179ef6392}{int {\bfseries i} = 0}\label{sort_8c_acb559820d9ca11295b4500f179ef6392}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Vijay Nandwani(isthegeek) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+17 April 2015
+\end{DoxyDate}
+This file contains tests of various sorting functions declared in \hyperlink{sort_8h}{sort.\-h}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]Allow user to pass test cases in the test functions \end{DoxyRefDesc}
+
+
+\subsection{Function Documentation}
+\hypertarget{sort_8c_af4428ddad54513b2da3d60173c8a75eb}{\index{sort.\-c@{sort.\-c}!test\-\_\-bubble\-\_\-sort@{test\-\_\-bubble\-\_\-sort}}
+\index{test\-\_\-bubble\-\_\-sort@{test\-\_\-bubble\-\_\-sort}!sort.c@{sort.\-c}}
+\subsubsection[{test\-\_\-bubble\-\_\-sort}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ test\-\_\-bubble\-\_\-sort (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{sort_8c_af4428ddad54513b2da3d60173c8a75eb}
+
+
+For testing the bubble sort. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \mbox{[}void\mbox{]}} & \\
+\hline
+\mbox{\tt out}  & {\em \mbox{[}void\mbox{]}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}void\mbox{]} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+None 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+None 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+None 
+\end{DoxyWarning}
+\hypertarget{sort_8c_aec576c05684bd98fee4f4286bc7d5f77}{\index{sort.\-c@{sort.\-c}!test\-\_\-insertion\-\_\-sort@{test\-\_\-insertion\-\_\-sort}}
+\index{test\-\_\-insertion\-\_\-sort@{test\-\_\-insertion\-\_\-sort}!sort.c@{sort.\-c}}
+\subsubsection[{test\-\_\-insertion\-\_\-sort}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ test\-\_\-insertion\-\_\-sort (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{sort_8c_aec576c05684bd98fee4f4286bc7d5f77}
+
+
+For testing the insertion sort. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \mbox{[}void\mbox{]}} & \\
+\hline
+\mbox{\tt out}  & {\em \mbox{[}void\mbox{]}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}void\mbox{]} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{sort_8c_abf7135b332e21904828f9a3b3dba5f6e}{test\-\_\-merge\-\_\-sort} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+None 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+None 
+\end{DoxyWarning}
+\hypertarget{sort_8c_abf7135b332e21904828f9a3b3dba5f6e}{\index{sort.\-c@{sort.\-c}!test\-\_\-merge\-\_\-sort@{test\-\_\-merge\-\_\-sort}}
+\index{test\-\_\-merge\-\_\-sort@{test\-\_\-merge\-\_\-sort}!sort.c@{sort.\-c}}
+\subsubsection[{test\-\_\-merge\-\_\-sort}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ test\-\_\-merge\-\_\-sort (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{sort_8c_abf7135b332e21904828f9a3b3dba5f6e}
+
+
+For testing the merge sort. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \mbox{[}void\mbox{]}} & \\
+\hline
+\mbox{\tt out}  & {\em \mbox{[}void\mbox{]}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}void\mbox{]} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+None 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+None 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+None 
+\end{DoxyWarning}
+\hypertarget{sort_8c_a40ee7a9a8baf8359d62c2bd233ef21fd}{\index{sort.\-c@{sort.\-c}!test\-\_\-quick\-\_\-sort@{test\-\_\-quick\-\_\-sort}}
+\index{test\-\_\-quick\-\_\-sort@{test\-\_\-quick\-\_\-sort}!sort.c@{sort.\-c}}
+\subsubsection[{test\-\_\-quick\-\_\-sort}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ test\-\_\-quick\-\_\-sort (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{sort_8c_a40ee7a9a8baf8359d62c2bd233ef21fd}
+
+
+For testing the quick sort. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \mbox{[}void\mbox{]}} & \\
+\hline
+\mbox{\tt out}  & {\em \mbox{[}void\mbox{]}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}void\mbox{]} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+None 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+None 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+None 
+\end{DoxyWarning}
+\hypertarget{sort_8c_a47f4e50402a9a8a0e821e2c4378fd1d9}{\index{sort.\-c@{sort.\-c}!test\-\_\-selection\-\_\-sort@{test\-\_\-selection\-\_\-sort}}
+\index{test\-\_\-selection\-\_\-sort@{test\-\_\-selection\-\_\-sort}!sort.c@{sort.\-c}}
+\subsubsection[{test\-\_\-selection\-\_\-sort}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ test\-\_\-selection\-\_\-sort (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{sort_8c_a47f4e50402a9a8a0e821e2c4378fd1d9}
+
+
+For testing the selection sort. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \mbox{[}void\mbox{]}} & \\
+\hline
+\mbox{\tt out}  & {\em \mbox{[}void\mbox{]}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}void\mbox{]} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+None 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+None 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+None 
+\end{DoxyWarning}
+\hypertarget{sort_8c_a51cfedc1338e8cae0384659bce30b858}{\index{sort.\-c@{sort.\-c}!test\-\_\-shell\-\_\-sort@{test\-\_\-shell\-\_\-sort}}
+\index{test\-\_\-shell\-\_\-sort@{test\-\_\-shell\-\_\-sort}!sort.c@{sort.\-c}}
+\subsubsection[{test\-\_\-shell\-\_\-sort}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ test\-\_\-shell\-\_\-sort (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{sort_8c_a51cfedc1338e8cae0384659bce30b858}
+
+
+For testing the shell sort. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \mbox{[}void\mbox{]}} & \\
+\hline
+\mbox{\tt out}  & {\em \mbox{[}void\mbox{]}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}void\mbox{]} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+None 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+None 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+None 
+\end{DoxyWarning}
+\hypertarget{sort_8c_a21f4cc83d8db6357814da803b32bbc72}{\index{sort.\-c@{sort.\-c}!test\-\_\-suite@{test\-\_\-suite}}
+\index{test\-\_\-suite@{test\-\_\-suite}!sort.c@{sort.\-c}}
+\subsubsection[{test\-\_\-suite}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ test\-\_\-suite (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{sort_8c_a21f4cc83d8db6357814da803b32bbc72}
+
+
+The testing suite. Calls all the test functions. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \mbox{[}void\mbox{]}} & \\
+\hline
+\mbox{\tt out}  & {\em \mbox{[}void\mbox{]}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}void\mbox{]} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+None 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+None 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+None 
+\end{DoxyWarning}

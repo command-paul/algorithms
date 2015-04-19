@@ -1,0 +1,184 @@
+/*!
+ * \file tests/sort.c
+ *
+ * \author Vijay Nandwani(isthegeek)
+ * \date 17 April 2015
+ *
+ * This file contains tests of various sorting functions declared in sort.h
+ *
+ *\todo Allow user to pass test cases in the test functions
+ */
+ 
+#include "minunit.h"
+#include "../src/sort.h"
+#include <stdio.h>
+#include <string.h>
+int tests_run = 0;
+int i = 0;
+
+/*!
+ * \brief For testing the insertion sort
+ *
+ * \param[in] [void]
+ * \param[out] [void]
+ * \return [void]
+ * \sa test_merge_sort
+ * \note None
+ * \warning None
+ */
+char *test_insertion_sort(void){
+	int arr1[8] = {4, 5, 20, 6, 2, 3, 12, 1};
+	int arr2[10] = {4, 65, 2, -31, 0, 99, 2, 83, 782, 1};
+	insertionSort(arr1,8);
+	insertionSort(arr2,10);
+	int arr3[8] = {1,2,3,4,5,6,12,20};
+	int arr4[10] = {-31,0,1,2,2,4,65,83,99,782};
+	COMPARE_INT_ARRAY("Test Insertion Sort 1", arr1,arr3,8,8);
+	COMPARE_INT_ARRAY("Test Insertion Sort 2", arr2,arr4,10,10);
+	return 0;
+}
+
+/*!
+ * \brief For testing the merge sort
+ *
+ * \param[in] [void]
+ * \param[out] [void]
+ * \return [void]
+ * \sa None
+ * \note None
+ * \warning None
+ */
+char *test_merge_sort(void)
+{ 
+	int arr1[8] = {4, 5, 20, 6, 2, 3, 12, 1};
+	int arr2[8] = {1,2,3,4,5,6,12,20};
+	int arr3[10] = {4, 65, 2, -31, 0, 99, 2, 83, 782, 1};
+	int arr4[10] = {-31,0,1,2,2,4,65,83,99,782};
+	mergeSort(arr1, 0,7);
+	mergeSort(arr3, 0, 9);
+	COMPARE_INT_ARRAY("Test Merge Sort 1", arr1,arr2,8,8);
+	COMPARE_INT_ARRAY("Test Merge Sort 2", arr3,arr4,10,10);
+	return 0;
+}
+
+/*!
+ * \brief For testing the quick sort
+ *
+ * \param[in] [void]
+ * \param[out] [void]
+ * \return [void]
+ * \sa None
+ * \note None
+ * \warning None
+ */
+char *test_quick_sort(void)
+{ 
+	int arr1[8] = {4, 5, 20, 6, 2, 3, 12, 1};
+	int arr2[8] = {1,2,3,4,5,6,12,20};
+	int arr3[10] = {4, 65, 2, -31, 0, 99, 2, 83, 782, 1};
+	int arr4[10] = {-31,0,1,2,2,4,65,83,99,782};
+	quickSort(arr1, 8);
+	quickSort(arr3, 10);
+	COMPARE_INT_ARRAY("Test Quick Sort 1", arr1,arr2,8,8);
+	COMPARE_INT_ARRAY("Test Quick Sort 2", arr3,arr4,10,10);
+	return 0;
+}
+
+/*!
+ * \brief For testing the bubble sort
+ *
+ * \param[in] [void]
+ * \param[out] [void]
+ * \return [void]
+ * \sa None
+ * \note None
+ * \warning None
+ */
+char *test_bubble_sort(void)
+{ 
+	int arr1[8] = {4, 5, 20, 6, 2, 3, 12, 1};
+	int arr2[8] = {1,2,3,4,5,6,12,20};
+	int arr3[10] = {4, 65, 2, -31, 0, 99, 2, 83, 782, 1};
+	int arr4[10] = {-31,0,1,2,2,4,65,83,99,782};
+	bubbleSort(arr1, 8);
+	bubbleSort(arr3, 10);
+	COMPARE_INT_ARRAY("Test Bubble Sort 1", arr1,arr2,8,8);
+	COMPARE_INT_ARRAY("Test Bubble Sort 2", arr3,arr4,10,10);
+	return 0;
+}
+
+/*!
+ * \brief For testing the selection sort
+ *
+ * \param[in] [void]
+ * \param[out] [void]
+ * \return [void]
+ * \sa None
+ * \note None
+ * \warning None
+ */
+char *test_selection_sort(void)
+{ 
+	int arr1[8] = {4, 5, 20, 6, 2, 3, 12, 1};
+	int arr2[8] = {1,2,3,4,5,6,12,20};
+	int arr3[10] = {4, 65, 2, -31, 0, 99, 2, 83, 782, 1};
+	int arr4[10] = {-31,0,1,2,2,4,65,83,99,782};
+	selectionSort(arr1, 8);
+	selectionSort(arr3, 10);
+	COMPARE_INT_ARRAY("Test Selection Sort 1", arr1,arr2,8,8);
+	COMPARE_INT_ARRAY("Test Selection Sort 2", arr3,arr4,10,10);
+	return 0;
+}
+
+/*!
+ * \brief For testing the shell sort
+ *
+ * \param[in] [void]
+ * \param[out] [void]
+ * \return [void]
+ * \sa None
+ * \note None
+ * \warning None
+ */
+char *test_shell_sort(void)
+{ 
+	int arr1[8] = {4, 5, 20, 6, 2, 3, 12, 1};
+	int arr2[8] = {1,2,3,4,5,6,12,20};
+	int arr3[10] = {4, 65, 2, -31, 0, 99, 2, 83, 782, 1};
+	int arr4[10] = {-31,0,1,2,2,4,65,83,99,782};
+	shellSort(arr1, 8);
+	shellSort(arr3, 10);
+	COMPARE_INT_ARRAY("Test Shell Sort 1", arr1,arr2,8,8);
+	COMPARE_INT_ARRAY("Test Shell Sort 2", arr3,arr4,10,10);
+	return 0;
+}
+
+/*!
+ * \brief The testing suite. Calls all the test functions
+ *
+ * \param[in] [void]
+ * \param[out] [void]
+ * \return [void]
+ * \sa None
+ * \note None
+ * \warning None
+ */
+char *test_suite(void)
+{
+	MU_RUN_TEST(test_insertion_sort);
+	MU_RUN_TEST(test_merge_sort);
+	MU_RUN_TEST(test_quick_sort);
+	MU_RUN_TEST(test_selection_sort);
+	MU_RUN_TEST(test_bubble_sort);
+	MU_RUN_TEST(test_shell_sort);
+    return 0;
+}
+
+int main(int ac, char **av)
+{
+  char *result = test_suite();
+
+  printf("Number of sorting test run: %d\n", tests_run);
+  if (result) {printf("FAIL: %s\n", result);}else{printf("All Tests Successful! \n");}
+  return 0 != result;
+}

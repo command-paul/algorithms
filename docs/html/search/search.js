@@ -9,7 +9,7 @@ var indexSectionsWithContent =
 {
   0: "bimqst",
   1: "s",
-  2: "bimqs",
+  2: "bimqst",
   3: "t"
 };
 

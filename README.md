@@ -28,6 +28,12 @@ Edit the src/main.c file
 
 Check out docs for more help!
 
+## Testing
+
+Please compile all the files and make the executable csd201 first
+
+Then make test
+
 ## Contributing
 
 1. Fork it!
