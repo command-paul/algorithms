@@ -131,11 +131,11 @@ void shellSort (int *arr, int n) {
     int h, i, j, t;
     for (h = n; h /= 2;) {
         for (i = h; i < n; i++) {
-            t = a[i];
-            for (j = i; j >= h && t < a[j - h]; j -= h) {
-                a[j] = a[j - h];
+            t = arr[i];
+            for (j = i; j >= h && t < arr[j - h]; j -= h) {
+                arr[j] = arr[j - h];
             }
-            a[j] = t;
+            arr[j] = t;
         }
     }
 }

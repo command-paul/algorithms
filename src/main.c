@@ -3,7 +3,7 @@
 
 int main(){
 	int arr[] = {4, 5, 20, 6, 2, 3, 12, 1};
-	insertionSort(arr, 8);
+	mergeSort(arr, 0, 7);
 	int i;
 	for (i = 0; i < 8; ++i) {
 		printf("%d ", arr[i]);

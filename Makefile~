@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS= -Wall -g -c -o
-OBJECTS = src/main.o src/sort.o
+OBJECTS = main.o src/sort.o
 TARGETS = csd201
 
 all: $(TARGETS)
