@@ -1,0 +1,247 @@
+\hypertarget{sort_8h}{\section{src/sort.h File Reference}
+\label{sort_8h}\index{src/sort.\-h@{src/sort.\-h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{sort_8h_a12e466f514afd468bd71f2ccdf1c3ee2}{insertion\-Sort} (int $\ast$arr, int len)
+\begin{DoxyCompactList}\small\item\em For sorting an integer array of length len using insertion Sort. \end{DoxyCompactList}\item 
+void \hyperlink{sort_8h_a05c7f4558a138717d51eae08e670cf9b}{merge\-Sort} (int arr\mbox{[}$\,$\mbox{]}, int l, int r)
+\begin{DoxyCompactList}\small\item\em For sorting an integer array of length r-\/l+1 using merge Sort. \end{DoxyCompactList}\item 
+void \hyperlink{sort_8h_a17654310abe16017420806ae9cfb9a58}{quick\-Sort} (int $\ast$arr, int n)
+\begin{DoxyCompactList}\small\item\em For sorting an integer array of length n using quick Sort. \end{DoxyCompactList}\item 
+void \hyperlink{sort_8h_ad3e74f93a013e0681a1ba1ef2eb14d90}{bubble\-Sort} (int $\ast$arr, int n)
+\begin{DoxyCompactList}\small\item\em For sorting an integer array of length n using bubble Sort. \end{DoxyCompactList}\item 
+void \hyperlink{sort_8h_a061ff4cd28731e5fd5e00fd3c1566dbb}{selection\-Sort} (int $\ast$arr, int n)
+\begin{DoxyCompactList}\small\item\em For sorting an integer array of length n using selection Sort. \end{DoxyCompactList}\item 
+void \hyperlink{sort_8h_a9e8ae86cc2ec15b53390d10f2a28324d}{shell\-Sort} (int $\ast$arr, int n)
+\begin{DoxyCompactList}\small\item\em For sorting an integer array of length n using shell Sort. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Vijay Nandwani(isthegeek) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+17 April 2015
+\end{DoxyDate}
+This file contains function declarations for various types of sorting functions
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]Add time complexity for each sort function \end{DoxyRefDesc}
+
+
+\subsection{Function Documentation}
+\hypertarget{sort_8h_ad3e74f93a013e0681a1ba1ef2eb14d90}{\index{sort.\-h@{sort.\-h}!bubble\-Sort@{bubble\-Sort}}
+\index{bubble\-Sort@{bubble\-Sort}!sort.h@{sort.\-h}}
+\subsubsection[{bubble\-Sort}]{\setlength{\rightskip}{0pt plus 5cm}void bubble\-Sort (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{arr, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{sort_8h_ad3e74f93a013e0681a1ba1ef2eb14d90}
+
+
+For sorting an integer array of length n using bubble Sort. 
+
+Example Usage\-: int arr\mbox{[}\mbox{]} = \{4, 65, 2, -\/31, 0, 99, 2, 83, 782, 1\};int n = sizeof arr / sizeof arr\mbox{[}0\mbox{]};bubble\-Sort(arr, n);
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \mbox{[}int} & $\ast$arr\mbox{]} \mbox{[}integer array to sort\mbox{]} \\
+\hline
+\mbox{\tt in}  & {\em \mbox{[}int} & n\mbox{]} \mbox{[}length of array\mbox{]} \\
+\hline
+\mbox{\tt out}  & {\em \mbox{[}void\mbox{]}} & \mbox{[}array is now sorted\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}void\mbox{]} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{sort_8h_a12e466f514afd468bd71f2ccdf1c3ee2}{insertion\-Sort}, \hyperlink{sort_8h_a05c7f4558a138717d51eae08e670cf9b}{merge\-Sort} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+None 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+None 
+\end{DoxyWarning}
+\hypertarget{sort_8h_a12e466f514afd468bd71f2ccdf1c3ee2}{\index{sort.\-h@{sort.\-h}!insertion\-Sort@{insertion\-Sort}}
+\index{insertion\-Sort@{insertion\-Sort}!sort.h@{sort.\-h}}
+\subsubsection[{insertion\-Sort}]{\setlength{\rightskip}{0pt plus 5cm}void insertion\-Sort (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{arr, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}}\label{sort_8h_a12e466f514afd468bd71f2ccdf1c3ee2}
+
+
+For sorting an integer array of length len using insertion Sort. 
+
+Example Usage\-: int arr\mbox{[}\mbox{]} = \{4, 5, 20, 6, 2, 3, 12, 1\};insertion\-Sort(arr, 8);
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \mbox{[}int} & $\ast$arr\mbox{]} \mbox{[}integer array to sort\mbox{]} \\
+\hline
+\mbox{\tt in}  & {\em \mbox{[}int} & len\mbox{]} \mbox{[}length of array to sort\mbox{]} \\
+\hline
+\mbox{\tt out}  & {\em \mbox{[}void\mbox{]}} & \mbox{[}array is now sorted\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}void\mbox{]} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{sort_8h_a05c7f4558a138717d51eae08e670cf9b}{merge\-Sort} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+None 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+None 
+\end{DoxyWarning}
+\hypertarget{sort_8h_a05c7f4558a138717d51eae08e670cf9b}{\index{sort.\-h@{sort.\-h}!merge\-Sort@{merge\-Sort}}
+\index{merge\-Sort@{merge\-Sort}!sort.h@{sort.\-h}}
+\subsubsection[{merge\-Sort}]{\setlength{\rightskip}{0pt plus 5cm}void merge\-Sort (
+\begin{DoxyParamCaption}
+\item[{int}]{arr\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{l, }
+\item[{int}]{r}
+\end{DoxyParamCaption}
+)}}\label{sort_8h_a05c7f4558a138717d51eae08e670cf9b}
+
+
+For sorting an integer array of length r-\/l+1 using merge Sort. 
+
+Example Usage\-: int arr\mbox{[}\mbox{]} = \{12, 11, 13, 5, 6, 7\};merge\-Sort(arr, 0, 5);
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \mbox{[}int} & $\ast$arr\mbox{]} \mbox{[}integer array to sort\mbox{]} \\
+\hline
+\mbox{\tt in}  & {\em \mbox{[}int} & l\mbox{]} \mbox{[}left end of array\mbox{]} \\
+\hline
+\mbox{\tt in}  & {\em \mbox{[}int} & r\mbox{]} \mbox{[}right end of array\mbox{]} \\
+\hline
+\mbox{\tt out}  & {\em \mbox{[}void\mbox{]}} & \mbox{[}array is now sorted\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}void\mbox{]} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{sort_8h_a12e466f514afd468bd71f2ccdf1c3ee2}{insertion\-Sort} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+None 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+None 
+\end{DoxyWarning}
+\hypertarget{sort_8h_a17654310abe16017420806ae9cfb9a58}{\index{sort.\-h@{sort.\-h}!quick\-Sort@{quick\-Sort}}
+\index{quick\-Sort@{quick\-Sort}!sort.h@{sort.\-h}}
+\subsubsection[{quick\-Sort}]{\setlength{\rightskip}{0pt plus 5cm}void quick\-Sort (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{arr, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{sort_8h_a17654310abe16017420806ae9cfb9a58}
+
+
+For sorting an integer array of length n using quick Sort. 
+
+Example Usage\-: int arr\mbox{[}\mbox{]} = \{4, 65, 2, -\/31, 0, 99, 2, 83, 782, 1\};int n = sizeof arr / sizeof arr\mbox{[}0\mbox{]};quick\-Sort(arr, n);
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \mbox{[}int} & $\ast$arr\mbox{]} \mbox{[}integer array to sort\mbox{]} \\
+\hline
+\mbox{\tt in}  & {\em \mbox{[}int} & n\mbox{]} \mbox{[}length of array\mbox{]} \\
+\hline
+\mbox{\tt out}  & {\em \mbox{[}void\mbox{]}} & \mbox{[}array is now sorted\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}void\mbox{]} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{sort_8h_a12e466f514afd468bd71f2ccdf1c3ee2}{insertion\-Sort}, \hyperlink{sort_8h_a05c7f4558a138717d51eae08e670cf9b}{merge\-Sort} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+None 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+None 
+\end{DoxyWarning}
+\hypertarget{sort_8h_a061ff4cd28731e5fd5e00fd3c1566dbb}{\index{sort.\-h@{sort.\-h}!selection\-Sort@{selection\-Sort}}
+\index{selection\-Sort@{selection\-Sort}!sort.h@{sort.\-h}}
+\subsubsection[{selection\-Sort}]{\setlength{\rightskip}{0pt plus 5cm}void selection\-Sort (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{arr, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{sort_8h_a061ff4cd28731e5fd5e00fd3c1566dbb}
+
+
+For sorting an integer array of length n using selection Sort. 
+
+Example Usage\-: int arr\mbox{[}\mbox{]} = \{4, 65, 2, -\/31, 0, 99, 2, 83, 782, 1\};int n = sizeof arr / sizeof arr\mbox{[}0\mbox{]};selection\-Sort(arr, n);
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \mbox{[}int} & $\ast$arr\mbox{]} \mbox{[}integer array to sort\mbox{]} \\
+\hline
+\mbox{\tt in}  & {\em \mbox{[}int} & n\mbox{]} \mbox{[}length of array\mbox{]} \\
+\hline
+\mbox{\tt out}  & {\em \mbox{[}void\mbox{]}} & \mbox{[}array is now sorted\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}void\mbox{]} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{sort_8h_a12e466f514afd468bd71f2ccdf1c3ee2}{insertion\-Sort}, \hyperlink{sort_8h_a05c7f4558a138717d51eae08e670cf9b}{merge\-Sort}, \hyperlink{sort_8h_ad3e74f93a013e0681a1ba1ef2eb14d90}{bubble\-Sort} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+None 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+None 
+\end{DoxyWarning}
+\hypertarget{sort_8h_a9e8ae86cc2ec15b53390d10f2a28324d}{\index{sort.\-h@{sort.\-h}!shell\-Sort@{shell\-Sort}}
+\index{shell\-Sort@{shell\-Sort}!sort.h@{sort.\-h}}
+\subsubsection[{shell\-Sort}]{\setlength{\rightskip}{0pt plus 5cm}void shell\-Sort (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{arr, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{sort_8h_a9e8ae86cc2ec15b53390d10f2a28324d}
+
+
+For sorting an integer array of length n using shell Sort. 
+
+Example Usage\-: int arr\mbox{[}\mbox{]} = \{4, 65, 2, -\/31, 0, 99, 2, 83, 782, 1\};int n = sizeof arr / sizeof arr\mbox{[}0\mbox{]};shell\-Sort(arr, n);
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \mbox{[}int} & $\ast$arr\mbox{]} \mbox{[}integer array to sort\mbox{]} \\
+\hline
+\mbox{\tt in}  & {\em \mbox{[}int} & n\mbox{]} \mbox{[}length of array\mbox{]} \\
+\hline
+\mbox{\tt out}  & {\em \mbox{[}void\mbox{]}} & \mbox{[}array is now sorted\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}void\mbox{]} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{sort_8h_a12e466f514afd468bd71f2ccdf1c3ee2}{insertion\-Sort}, \hyperlink{sort_8h_a05c7f4558a138717d51eae08e670cf9b}{merge\-Sort}, \hyperlink{sort_8h_ad3e74f93a013e0681a1ba1ef2eb14d90}{bubble\-Sort}, \hyperlink{sort_8h_a061ff4cd28731e5fd5e00fd3c1566dbb}{selection\-Sort} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+None 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+None 
+\end{DoxyWarning}
