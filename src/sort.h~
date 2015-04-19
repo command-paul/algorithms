@@ -1,0 +1,6 @@
+#ifndef SORT_H_   /* Include guard */
+#define SORT_H_
+
+int insertionSort(int *arr, int len);
+
+#endif
