@@ -1,13 +1,9 @@
 #include <stdio.h>
-#include "sort.h"
+#include "misc.h"
 
 int main(){
-	int arr[] = {4, 5, 20, 6, 2, 3, 12, 1};
-	quickSort(arr, 8);
-	int i;
-	for (i = 0; i < 8; ++i) {
-		printf("%d ", arr[i]);
-	}
-	printf("\n");
+	int x = 2;
+	unsigned int y = 3;
+	printf("%d", power(x,y));
 	return 0;
 }

@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS= -Wall -g -c -o
-OBJECTS = src/main.o src/sort.o
+OBJECTS = src/main.o src/sort.o src/search.o src/misc.o
 TARGETS = csd201 
 TESTS = tests/sort.o
 
@@ -9,7 +9,13 @@ all: $(TARGETS)
 src/sort.o:
 	$(CC) $(CFLAGS) src/sort.o src/sort.c
 
-src/main.o: src/sort.o
+src/search.o:
+	$(CC) $(CFLAGS) src/search.o src/search.c
+
+src/misc.o:
+	$(CC) $(CFLAGS) src/misc.o src/misc.c
+
+src/main.o: src/sort.o src/search.o src/misc.o
 	$(CC) $(CFLAGS) src/main.o src/main.c
 
 csd201: $(OBJECTS)
