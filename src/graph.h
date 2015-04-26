@@ -4,8 +4,8 @@
  * \author Paul George(coolkid)
  * \date 17 April 2015
  *
- * This file contains function declarations for various types of sorting functions
- *
+ * This file contains function declarations for various types of Graph Functions 
+ * includinng an API Created using Open GL to plot and visualise the graphs created.
  */
 #ifndef GRAPH_H_
 #define GRAPH_H_
