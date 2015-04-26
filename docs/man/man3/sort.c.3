@@ -1,0 +1,320 @@
+.TH "tests/sort.c" 3 "Mon Apr 20 2015" "CSD201 Algos" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tests/sort.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'minunit\&.h'\fP
+.br
+\fC#include '\&.\&./src/sort\&.h'\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "char * \fBtest_insertion_sort\fP (void)"
+.br
+.RI "\fIFor testing the insertion sort\&. \fP"
+.ti -1c
+.RI "char * \fBtest_merge_sort\fP (void)"
+.br
+.RI "\fIFor testing the merge sort\&. \fP"
+.ti -1c
+.RI "char * \fBtest_quick_sort\fP (void)"
+.br
+.RI "\fIFor testing the quick sort\&. \fP"
+.ti -1c
+.RI "char * \fBtest_bubble_sort\fP (void)"
+.br
+.RI "\fIFor testing the bubble sort\&. \fP"
+.ti -1c
+.RI "char * \fBtest_selection_sort\fP (void)"
+.br
+.RI "\fIFor testing the selection sort\&. \fP"
+.ti -1c
+.RI "char * \fBtest_shell_sort\fP (void)"
+.br
+.RI "\fIFor testing the shell sort\&. \fP"
+.ti -1c
+.RI "char * \fBtest_suite\fP (void)"
+.br
+.RI "\fIThe testing suite\&. Calls all the test functions\&. \fP"
+.ti -1c
+.RI "int \fBmain\fP (int ac, char **av)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBtests_run\fP = 0"
+.br
+.ti -1c
+.RI "int \fBi\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Vijay Nandwani(isthegeek) 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+17 April 2015
+.RE
+.PP
+This file contains tests of various sorting functions declared in \fBsort\&.h\fP
+.PP
+\fBTodo\fP
+.RS 4
+Allow user to pass test cases in the test functions 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "char* test_bubble_sort (void)"
+
+.PP
+For testing the bubble sort\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI[void]\fP 
+.br
+\fI[void]\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+[void] 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+None 
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+None 
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+None 
+.RE
+.PP
+
+.SS "char* test_insertion_sort (void)"
+
+.PP
+For testing the insertion sort\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI[void]\fP 
+.br
+\fI[void]\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+[void] 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBtest_merge_sort\fP 
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+None 
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+None 
+.RE
+.PP
+
+.SS "char* test_merge_sort (void)"
+
+.PP
+For testing the merge sort\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI[void]\fP 
+.br
+\fI[void]\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+[void] 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+None 
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+None 
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+None 
+.RE
+.PP
+
+.SS "char* test_quick_sort (void)"
+
+.PP
+For testing the quick sort\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI[void]\fP 
+.br
+\fI[void]\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+[void] 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+None 
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+None 
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+None 
+.RE
+.PP
+
+.SS "char* test_selection_sort (void)"
+
+.PP
+For testing the selection sort\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI[void]\fP 
+.br
+\fI[void]\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+[void] 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+None 
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+None 
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+None 
+.RE
+.PP
+
+.SS "char* test_shell_sort (void)"
+
+.PP
+For testing the shell sort\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI[void]\fP 
+.br
+\fI[void]\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+[void] 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+None 
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+None 
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+None 
+.RE
+.PP
+
+.SS "char* test_suite (void)"
+
+.PP
+The testing suite\&. Calls all the test functions\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI[void]\fP 
+.br
+\fI[void]\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+[void] 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+None 
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+None 
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+None 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSD201 Algos from the source code\&.

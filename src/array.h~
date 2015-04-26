@@ -1,0 +1,46 @@
+/*!
+ * \file array.h
+ *
+ * \author Vijay Nandwani(isthegeek)
+ * \date 17 April 2015
+ *
+ * This file contains function declarations for various array related functions
+ *
+ *\todo Add time complexity for each function in their documentation
+ */
+#ifndef ARRAY_H_
+#define ARRAY_H_
+
+
+/*!
+ * \brief For removing duplicate elements from an array
+ *
+ * Example Usage: int arr[] = {4, 5, 6, 20, 6, 2, 3, 2, 1};remdup(arr, 9);
+ *
+ * \param[in] [int *arr] [integer array to remove duplicate from]
+ * \param[in] [int len] [length of array]
+ * \param[out] [void] [array is now free of duplicates]
+ * \return [void]
+ * \sa None
+ * \note None
+ * \warning None
+ */
+void remdup(int *arr, int len);
+
+/*!
+ * \brief For printing an integer array
+ *
+ * Example Usage: int arr[] = {4, 5, 6, 20, 6, 2, 3, 2, 1};print(arr, 9);
+ *
+ * \param[in] [int *arr] [integer array to print]
+ * \param[in] [int len] [length of array]
+ * \param[in] [char *message] [Message to print before each element]
+ * \param[out] [void] []
+ * \return [void]
+ * \sa None
+ * \note None
+ * \warning None
+ */
+void printm(int *arr, int len, char *message);
+void print(int *arr, int len);
+#endif

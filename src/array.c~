@@ -1,0 +1,34 @@
+#include "array.h"
+
+void remdup(int *arr, int len)
+{
+    int *current , *end = arr + len - 1;
+	for ( current = arr + 1; arr < end; arr++, current = arr + 1 )
+    {
+        while ( current <= end )
+        {
+            if ( *current == *arr )
+            {
+                *current = *end--;
+            }
+            else
+            {
+                current++;
+            }
+        }
+    }
+}
+
+void print(int *arr, int len){
+	int i = 0;
+	for(i = 0; i<len; i++){
+		printf("Array element %d: %d\n", i, arr[i]);
+	}
+}
+
+void printm(int *arr, int len, char *message){
+	int i = 0;
+	for(i = 0; i<len; i++){
+		printf("%s: %d\n", message, arr[i]);
+	}
+}

@@ -1,0 +1,328 @@
+#include "graph.h"
+
+void setNodes(){
+	printf("Please enter the number of nodes you want: ");
+	scanf("%lf", &nodes);
+}
+
+gedge** initialise(){
+	gedge** holder;
+	holder = malloc(sizeof(gedge*)*nodes);
+		if (holder == NULL) return;	
+	
+	int i,j;
+	for(i=0;i<nodes;i++){
+		holder[i]=malloc(sizeof(gedge)*nodes);
+		for(j=0;j<nodes;j++){
+			holder[i][j].weight=-1;
+			holder[i][j].visited=0;
+			}
+		}
+	return holder;
+}
+
+
+void initnodes(){
+	int i;
+    array = malloc(sizeof(gnode)*nodes);
+    double e=2*w/5;
+    double f=2*h/5;
+	for(i=0;i<nodes;i++){
+   		array[i].x=(w/2)+e*sin(i*2*PI/nodes);
+   		array[i].y=(h/2)+f*cos(i*2*PI/nodes);   	   		   	
+   		}
+}
+
+void setShowWeights(int val){
+	if(val)
+		showWeights = 1;
+	else
+		showWeights = 0;
+}
+
+void initgui(int argc, char *argv[]){
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glutInit( &argc, argv );
+	glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
+	printf("Graph Engine Initialized..\n");
+	printf("OpenGL Initialized..\n");
+	printf("Creating Window..\n");
+	printf("Enter the width and height (w,h): ");
+	scanf("%lf,%lf", &w,&h);
+	glutInitWindowSize (w, h); 
+    glutCreateWindow( "TEST WINDOW" );
+}
+
+void keyboard(unsigned char key, int x, int y)
+{
+   switch (key) {
+      case 27:
+         exit(0);
+         break;
+   }
+}
+
+// String Plotting Function 
+void write_string( const unsigned char *s, GLfloat  x,  GLfloat  y )
+{
+    glColor3d( 2, 2, 2 );
+    glRasterPos3f(x-9,y-9, 0 );
+    glutBitmapString( font, s );
+}
+//String Plotting Function - S => smaller font
+void write_strings( const unsigned char *s,GLfloat  x,  GLfloat  y )
+{
+    glColor3d( 2, 2, 2 );
+    glRasterPos3f(x-9,y-9, 0 );
+    glutBitmapString( GLUT_BITMAP_HELVETICA_10 , s );
+}
+
+/// Graph plotting function
+void goplot(){
+	int j,k;
+	int n= nodes;
+	char buffer[24];
+	gedge** matrix = output;
+	/*
+	gedge matrix[n][n];
+	for(j=0;j<nodes;j++){
+		for(k=0;k<nodes;k++){
+			if(j!=k){//j!=k&&j!=k-1&&k!=j-1&&j!=k-3&&k!=j-3){
+				matrix[j][k].weight=j+k+j;
+				matrix[j][k].visited=0;
+				}
+			else{
+				matrix[j][k].weight=0;
+				matrix[j][k].visited=0;
+				}
+			}
+		}*/
+	for(j=0;j<nodes;j++){
+		for(k=0;k<nodes;k++){
+			if(matrix[j][k].weight!=-1){
+	   			if(matrix[j][k].weight==matrix[k][j].weight){
+	   				if(j<k){
+	   					sprintf(buffer, "<->%.3f",matrix[j][k].weight);
+	   					if(showWeights){
+	   						write_strings( buffer ,(((array[j].x)+(array[k].x))/2)+10,(((array[k].y)+(array[j].y))/2)+10);
+	   					}
+						drawOneLine (array[j].x,array[j].y,array[k].x,array[k].y);
+	   					}
+	   				}
+				else{
+					if(j>k){
+						sprintf(buffer, "->%.3f",matrix[j][k].weight);
+	   					if(showWeights){
+	   						write_strings( buffer ,(((array[j].x)+(array[k].x))/2)+10,(((array[k].y)+(array[j].y))/2)+10);
+						}
+						drawOneLine (array[j].x,array[j].y,array[k].x,array[k].y);
+						}
+					else{
+						sprintf(buffer, "<-%.3f",matrix[j][k].weight);
+	   					if(showWeights){
+	   						write_strings( buffer ,(((array[j].x)+(array[k].x))/2)-10,(((array[k].y)+(array[j].y))/2)-10);
+						}
+						drawOneLine (array[j].x,array[j].y,array[k].x,array[k].y);
+						}
+					}
+				}
+			}
+		}
+	}
+	
+void screenshot(){
+	
+	uint8_t new[(int)w * (int)h * 3];
+	uint8_t *pixels = new ;
+	// copy pixels from screen
+	glReadPixels(0, 0, w, h, GL_RGB, GL_UNSIGNED_BYTE, (GLvoid *)pixels);
+	int j = 0; int i =0;
+	// invert pixels (stolen from SOILs source code)
+	for (j = 0; j * 2 < h; ++j) {
+		int x = j * w * 3;
+		int y = (h - 1 - j) * w * 3;
+		for (i = w * 3; i > 0; --i) {
+		    uint8_t tmp = pixels[x];
+		    pixels[x] = pixels[y];
+		    pixels[y] = tmp;
+		    ++x;
+		    ++y;
+		}
+	}
+
+// save the image
+int err = SOIL_save_image("a.bmp", SOIL_SAVE_TYPE_BMP, w, h, 3, pixels);
+if (err)
+   printf("Done\n");
+else
+   printf("Failed\n");
+	}
+/*
+ * The main display rendering function 
+ */
+void cb_display( void )
+{
+     int i;
+    double j;
+    char buffer[24];
+    double angle;
+    glPointSize(1.0f);
+    glClear (GL_COLOR_BUFFER_BIT);
+	//plot lines between nodes
+	goplot();
+	
+	// draw nodes
+	for(i=0;i<nodes;i++){
+		glColor3f(0,0,0);
+		drawSolidCircle(array[i].x,array[i].y,20);
+		glColor3f(1,1,1);
+		drawHollowCircle(array[i].x,array[i].y,20);
+   		sprintf(buffer, "%d",i+1);
+   		write_string( buffer ,array[i].x,array[i].y);			
+		
+		/*for(j=0;j<2*PI;j+=0.001){
+			glBegin(GL_POINTS); 
+    		glVertex3f((array[i].x+20*cos(j)),(array[i].y+20*sin(j)),0);
+    		glEnd();
+   		  	}*/    	   		   	
+   		}
+    screenshot();
+    glFlush();
+    glutSwapBuffers( );
+}
+
+/// Helper function to reshape the window
+void reshape (int w, int h)
+{
+   glViewport (0, 0, (GLsizei) w, (GLsizei) h);
+   glMatrixMode (GL_PROJECTION);
+   glLoadIdentity ();
+   gluOrtho2D (0.0, (GLdouble) w, 0.0, (GLdouble) h);
+}
+
+void makegraph(gedge** matrix){
+	output = matrix;
+	glutDisplayFunc(cb_display);
+    font = GLUT_BITMAP_TIMES_ROMAN_24;//GLUT_BITMAP_8_BY_13;
+    glutReshapeFunc(reshape);
+	glutKeyboardFunc(keyboard);
+    glutMainLoop( );
+}
+
+/* Function Add Edge on the adjcency matrix  
+
+void addedge(gedge*** holder,int nodes,int node1,int node2,int directed,int weight){
+	if(node1>=nodes||node2>=nodes)
+		return;
+	(*holder)[node1][node2].weight = weight;
+	if(directed==0){
+		(*holder)[node2][node1].weight = weight;
+		}
+	}*/
+	
+void addedge(gedge** holder,int node1,int node2,int directed,int weight){
+	if(node1>=nodes||node2>=nodes)
+		return;
+	holder[node1][node2].weight = weight;
+	if(directed==0){
+		holder[node2][node1].weight = weight;
+		}
+	}
+		
+	
+/* Function Delete Edge  */
+
+void deledge(gedge** holder,int nodes,int node1,int node2,int directed){
+	if(node1>=nodes||node2>=nodes)
+		return;	
+	holder[node1][node2].weight = -1;
+	if(directed==0)
+		holder[node2][node1].weight = -1;
+	}
+
+// Function Print in list form 
+void printmtx(gedge** holder){
+	int i,j;
+	for(i=0;i<nodes;i++){
+		for(j=0;j<nodes;j++){
+			if(holder[i][j].weight!=-1){
+				if(holder[i][j].weight==holder[j][i].weight){
+					if(j>i)
+						printf("%d<---%.0lf--->%d\n",i,holder[i][j].weight,j);
+					}				
+				else
+					printf("%d----%.0lf--->%d\n",i,holder[i][j].weight,j);
+				}
+			}
+		}
+	}
+// debug print matrix
+void printer(gedge** matrix){
+	int i,j;
+	for(i=0;i<nodes;i++){
+		for(j=0;j<nodes;j++){
+			if(matrix[i][j].weight!=-1)
+				printf("%2.0lf",matrix[i][j].weight);
+			else printf("--");
+			}
+		printf("\n");
+		}
+	}
+
+// int has been visited
+int visited(gedge** matrix,int nodes,int node){
+	int i;
+	for(i=0;i<nodes;i++){
+		if(matrix[node][i].visited!=0)
+			return 0;
+		}
+	return 1;
+	}	
+	
+
+	
+//// Kruscals Algorithm
+gedge** kruscal(gedge** matrix){
+	int i,j,k=0;
+	kruscals* array = malloc(sizeof(kruscals)*(nodes*nodes));
+	for(i=0;i<nodes*nodes;i++){
+		array[i].x=-1;
+		array[i].y=-1;
+		array[i].weight=-1;
+		}		
+	// collect edges
+	k=0;
+	for(i=0;i<nodes;i++){
+		for(j=0;j<nodes;j++){
+			if(matrix[i][j].weight!=-1){
+				array[k].x=i;
+				array[k].y=j;
+				array[k].weight=matrix[i][j].weight;
+				k++;
+				}
+			}
+		}
+	//sort edges
+	kruscals temp;
+	for(i=0;array[i].weight!=-1;i++){
+		for(j=i+1;array[j].weight!=-1;j++){
+			if(array[j].weight<array[i].weight){
+				temp = array[j];
+				array[j]=array[i];
+				array[i]=temp;
+				}
+			}
+		}
+	//rebuild new adjcency matrix
+	gedge** out = initialise();
+	//output[array[0].x][array[0].y].visited=1;
+	//output[array[0].x][array[0].y].weight=array[0].weight;
+	for(i=0;array[i].weight!=-1;i++){
+		if(visited(out,nodes,array[i].y)*visited(out,nodes,array[i].x)==1){ // FIXME THE OPERATOR LOGIC INSIDE
+			out[array[i].x][array[i].y].visited=1;
+			out[array[i].x][array[i].y].weight=array[i].weight;
+			}
+		}
+	return out;
+	}
+

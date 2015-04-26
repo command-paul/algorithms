@@ -1,0 +1,275 @@
+.TH "src/sort.h" 3 "Mon Apr 20 2015" "CSD201 Algos" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/sort.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinsertionSort\fP (int *arr, int len)"
+.br
+.RI "\fIFor sorting an integer array of length len using insertion Sort\&. \fP"
+.ti -1c
+.RI "void \fBmergeSort\fP (int arr[], int l, int r)"
+.br
+.RI "\fIFor sorting an integer array of length r-l+1 using merge Sort\&. \fP"
+.ti -1c
+.RI "void \fBquickSort\fP (int *arr, int n)"
+.br
+.RI "\fIFor sorting an integer array of length n using quick Sort\&. \fP"
+.ti -1c
+.RI "void \fBbubbleSort\fP (int *arr, int n)"
+.br
+.RI "\fIFor sorting an integer array of length n using bubble Sort\&. \fP"
+.ti -1c
+.RI "void \fBselectionSort\fP (int *arr, int n)"
+.br
+.RI "\fIFor sorting an integer array of length n using selection Sort\&. \fP"
+.ti -1c
+.RI "void \fBshellSort\fP (int *arr, int n)"
+.br
+.RI "\fIFor sorting an integer array of length n using shell Sort\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Vijay Nandwani(isthegeek) 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+17 April 2015
+.RE
+.PP
+This file contains function declarations for various types of sorting functions
+.PP
+\fBTodo\fP
+.RS 4
+Add time complexity for each sort function in their documentation 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void bubbleSort (int *arr, intn)"
+
+.PP
+For sorting an integer array of length n using bubble Sort\&. Example Usage: int arr[] = {4, 65, 2, -31, 0, 99, 2, 83, 782, 1};int n = sizeof arr / sizeof arr[0];bubbleSort(arr, n);
+.PP
+\fBParameters:\fP
+.RS 4
+\fI[int\fP *arr] [integer array to sort] 
+.br
+\fI[int\fP n] [length of array] 
+.br
+\fI[void]\fP [array is now sorted] 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+[void] 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBinsertionSort\fP, \fBmergeSort\fP 
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+None 
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+None 
+.RE
+.PP
+
+.SS "void insertionSort (int *arr, intlen)"
+
+.PP
+For sorting an integer array of length len using insertion Sort\&. Example Usage: int arr[] = {4, 5, 20, 6, 2, 3, 12, 1};insertionSort(arr, 8);
+.PP
+\fBParameters:\fP
+.RS 4
+\fI[int\fP *arr] [integer array to sort] 
+.br
+\fI[int\fP len] [length of array to sort] 
+.br
+\fI[void]\fP [array is now sorted] 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+[void] 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBmergeSort\fP 
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+None 
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+None 
+.RE
+.PP
+
+.SS "void mergeSort (intarr[], intl, intr)"
+
+.PP
+For sorting an integer array of length r-l+1 using merge Sort\&. Example Usage: int arr[] = {12, 11, 13, 5, 6, 7};mergeSort(arr, 0, 5);
+.PP
+\fBParameters:\fP
+.RS 4
+\fI[int\fP *arr] [integer array to sort] 
+.br
+\fI[int\fP l] [left end of array] 
+.br
+\fI[int\fP r] [right end of array] 
+.br
+\fI[void]\fP [array is now sorted] 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+[void] 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBinsertionSort\fP 
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+None 
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+None 
+.RE
+.PP
+
+.SS "void quickSort (int *arr, intn)"
+
+.PP
+For sorting an integer array of length n using quick Sort\&. Example Usage: int arr[] = {4, 65, 2, -31, 0, 99, 2, 83, 782, 1};int n = sizeof arr / sizeof arr[0];quickSort(arr, n);
+.PP
+\fBParameters:\fP
+.RS 4
+\fI[int\fP *arr] [integer array to sort] 
+.br
+\fI[int\fP n] [length of array] 
+.br
+\fI[void]\fP [array is now sorted] 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+[void] 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBinsertionSort\fP, \fBmergeSort\fP 
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+None 
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+None 
+.RE
+.PP
+
+.SS "void selectionSort (int *arr, intn)"
+
+.PP
+For sorting an integer array of length n using selection Sort\&. Example Usage: int arr[] = {4, 65, 2, -31, 0, 99, 2, 83, 782, 1};int n = sizeof arr / sizeof arr[0];selectionSort(arr, n);
+.PP
+\fBParameters:\fP
+.RS 4
+\fI[int\fP *arr] [integer array to sort] 
+.br
+\fI[int\fP n] [length of array] 
+.br
+\fI[void]\fP [array is now sorted] 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+[void] 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBinsertionSort\fP, \fBmergeSort\fP, \fBbubbleSort\fP 
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+None 
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+None 
+.RE
+.PP
+
+.SS "void shellSort (int *arr, intn)"
+
+.PP
+For sorting an integer array of length n using shell Sort\&. Example Usage: int arr[] = {4, 65, 2, -31, 0, 99, 2, 83, 782, 1};int n = sizeof arr / sizeof arr[0];shellSort(arr, n);
+.PP
+\fBParameters:\fP
+.RS 4
+\fI[int\fP *arr] [integer array to sort] 
+.br
+\fI[int\fP n] [length of array] 
+.br
+\fI[void]\fP [array is now sorted] 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+[void] 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBinsertionSort\fP, \fBmergeSort\fP, \fBbubbleSort\fP, \fBselectionSort\fP 
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+None 
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+None 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSD201 Algos from the source code\&.
