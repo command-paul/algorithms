@@ -1,6 +1,6 @@
 CC=gcc
-CFLAGS= -Wall -g -c -o
-OBJECTS = src/main.o src/sort.o src/search.o src/misc.o
+CFLAGS= -Wall -Werror -g -c -o
+OBJECTS = src/main.o src/sort.o src/search.o src/misc.o src/libgraph.so
 TARGETS = csd201 
 TESTS = tests/sort.o
 
@@ -15,7 +15,7 @@ src/search.o:
 src/misc.o:
 	$(CC) $(CFLAGS) src/misc.o src/misc.c
 
-src/main.o: src/sort.o src/search.o src/array.o
+src/main.o: src/sort.o src/search.o src/misc.o 
 	$(CC) $(CFLAGS) src/main.o src/main.c
 
 csd201: $(OBJECTS)
@@ -24,9 +24,25 @@ csd201: $(OBJECTS)
 test: $(OBJECTS)
 	$(CC) $(CFLAGS) tests/sort.o tests/sort.c 
 	$(CC) -o testexec $(TESTS) src/sort.o
+
+packages:
+	sudo apt-get install freeglut3 freeglut3-dev
+
+graph:
+	$(CC) -c -fpic -o src/graph.o src/graph.c -lSOIL -lglut -lGL -lGLU -lm
+	$(CC) -shared -o src/libgraph.so src/graph.o
+	sudo cp src/libgraph.so /usr/lib
+	sudo chmod 0755 /usr/lib/libgraph.so
+	sudo ldconfig
+
+makegraph:
+	$(CC) -o csd201 src/testgraph.c -I/usr/include /usr/lib/libSOIL.a -lgraph -lglut -lGL -lGLU -lm
+
 clean:
 	rm -f *.o
 	rm csd201
 	rm src/*.o
 	rm tests/*.o
 	rm testexec
+
+.PHONY: all packages
