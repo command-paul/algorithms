@@ -64,6 +64,7 @@ char buffer[24];		//global text buffer
 double nodes = 5;		// nodes definition
 gnode* array;			// node daatabase 
 int showWeights = 0;
+int saveScreen = 0;
 void initnodes();
 gedge** Graph;
 gedge** output; //Always use this to print graphs
@@ -94,6 +95,7 @@ void write_strings( const unsigned char *s,GLfloat  x,  GLfloat  y );
 void goplot();
 
 void setShowWeights(int val);
+void setSaveScreen(int val);
 /*
  * The main display rendering function 
  */
@@ -122,7 +124,7 @@ gedge** dijkstras(gedge** matrix,int nodes);
 //// Kruscals Algorithm
 gedge** kruscal(gedge** matrix);
 
-void setNodes();
+void setNodes(double n);
 
 
 #endif

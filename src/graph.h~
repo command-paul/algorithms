@@ -4,8 +4,8 @@
  * \author Paul George(coolkid)
  * \date 17 April 2015
  *
- * This file contains function declarations for various types of sorting functions
- *
+ * This file contains function declarations for various types of Graph Functions 
+ * includinng an API Created using Open GL to plot and visualise the graphs created.
  */
 #ifndef GRAPH_H_
 #define GRAPH_H_
@@ -15,7 +15,7 @@
 #include<GL/gl.h>
 #include <stdio.h>
 #include <GL/freeglut.h>
-#include <SOIL.h>
+#include <SOIL/SOIL.h>
 #define PI 3.1415926535897932
 
 #define drawOneLine(x1,y1,x2,y2)  glBegin(GL_LINES);  \
@@ -64,6 +64,7 @@ char buffer[24];		//global text buffer
 double nodes = 5;		// nodes definition
 gnode* array;			// node daatabase 
 int showWeights = 0;
+int saveScreen = 0;
 void initnodes();
 gedge** Graph;
 gedge** output; //Always use this to print graphs
@@ -122,7 +123,7 @@ gedge** dijkstras(gedge** matrix,int nodes);
 //// Kruscals Algorithm
 gedge** kruscal(gedge** matrix);
 
-void setNodes();
+void setNodes(double n);
 
 
 #endif
