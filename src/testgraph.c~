@@ -1,28 +1,55 @@
+/*!
+ * \file testgraph.c
+ *
+ * \author Paul George(coolkid) and Vijay Nandwani(isthegeek)
+ * \date 17 April 2015
+ *
+ * This file is an example file for showing how to use graph.h
+ *
+ *\todo Move this file to examples
+ *\todo Add a way to accept the nodes and edges from the user
+ */
+
 #include <graph.h>
 
 int main(int argc, char *argv[]){
-	//initnodes();
-	//initgui(argc, argv);
-	//makegraph();
+
+//Setting the number of nodes of the Graph
 	setNodes(5);
+//Initialising all the nodes with a default value and making a Graph
 	Graph = initialise();
+//Adding edges in the graph
+//Format: Graph,node1,node2,directedness,weight
 	addedge(Graph,0,1,0,2);
 	addedge(Graph,1,2,0,3);
 	addedge(Graph,2,3,0,5);
 	addedge(Graph,3,4,0,5);
 	addedge(Graph,4,0,0,1);
 	addedge(Graph,4,1,0,1);
-	addedge(Graph,2,4,0,7);//matrix,nodes,node1,node2,directedness,weight
+	addedge(Graph,2,4,0,7);
+//Printing the graph on the screen in adjcency matrix format
 	printer(Graph);
-	
+
+//Graphical Functions
+
+//Finding locations of all the nodes on the screen
 	initnodes();
-	initgui(argc, argv);
+//Show weights or not
 	setShowWeights(1);
-	setSaveScreen(10;
+//Save screenshot in bmp format or not
+	setSaveScreen(0);
+//If setWindowSize is 1, it would ask the user the dimensions of window.
+	setWindowSize(0);
+//For screen settings. Third parameter is the name of the window
+	initgui(argc, argv, "My Graph Window");
+//Make the graph on screen in visual format
 	makegraph(Graph);
-	
+
+//Make another graph for kruskals
 	gedge** krusc = initialise();
+//Use the kruskals method on the Graph to find the minimum spanning tree
 	krusc = kruscal(Graph);
+//Print the minimum spanning tree
 	printer(krusc);
 	//makegraph(krusc);
 	

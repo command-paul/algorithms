@@ -70,7 +70,7 @@ gedge** Graph;
 gedge** output; //Always use this to print graphs
 gedge** initialise();
 
-void initgui(int argc, char *argv[]);
+void initgui(int argc, char *argv[], char* string);
 /*
 Some Sample Fonts
     {GLUT_BITMAP_8_BY_13,        "Fixed 8x13"},
@@ -95,6 +95,8 @@ void write_strings( const unsigned char *s,GLfloat  x,  GLfloat  y );
 void goplot();
 
 void setShowWeights(int val);
+void setSaveScreen(int val);
+void setWindowSize(int val);
 /*
  * The main display rendering function 
  */

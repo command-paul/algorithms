@@ -47,17 +47,27 @@ void setSaveScreen(int val){
 	}
 }
 
-void initgui(int argc, char *argv[]){
+void setWindowSize(int val){
+	if(val){
+		windowSize = 1;
+	} else {
+		windowSize = 0;
+	}
+}
+
+void initgui(int argc, char *argv[], char* string){
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glutInit( &argc, argv );
 	glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
 	printf("Graph Engine Initialized..\n");
 	printf("OpenGL Initialized..\n");
 	printf("Creating Window..\n");
-	printf("Enter the width and height (w,h): ");
-	scanf("%lf,%lf", &w,&h);
+	if(windowSize){
+		printf("Enter the width and height (w,h): ");
+		scanf("%lf,%lf", &w,&h);
+	}
 	glutInitWindowSize (w, h); 
-    glutCreateWindow( "TEST WINDOW" );
+    glutCreateWindow(string);
 }
 
 void keyboard(unsigned char key, int x, int y)

@@ -65,12 +65,13 @@ double nodes = 5;		// nodes definition
 gnode* array;			// node daatabase 
 int showWeights = 0;
 int saveScreen = 0;
+int windowSize = 0;
 void initnodes();
 gedge** Graph;
 gedge** output; //Always use this to print graphs
 gedge** initialise();
 
-void initgui(int argc, char *argv[]);
+void initgui(int argc, char *argv[], char* string);
 /*
 Some Sample Fonts
     {GLUT_BITMAP_8_BY_13,        "Fixed 8x13"},
@@ -96,6 +97,7 @@ void goplot();
 
 void setShowWeights(int val);
 void setSaveScreen(int val);
+void setWindowSize(int val);
 /*
  * The main display rendering function 
  */
