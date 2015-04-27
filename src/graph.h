@@ -15,7 +15,7 @@
 #include<GL/gl.h>
 #include <stdio.h>
 #include <GL/freeglut.h>
-#include "SOIL.h"
+#include <SOIL/SOIL.h>
 #define PI 3.1415926535897932
 
 #define drawOneLine(x1,y1,x2,y2)  glBegin(GL_LINES);  \

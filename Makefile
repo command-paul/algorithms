@@ -30,8 +30,10 @@ packages:
 	sudo apt-get install libsoil-dev
 
 graph:
-	$(CC) -c -fpic -o src/graph.o src/graph.c -lglut -lSOIL -lGL -lGLU -lm
+	$(CC) -c -fpic -o src/graph.o src/graph.c -l /usr/glut -lSOIL -lGL -lGLU -lm
 	$(CC) -shared -o src/libgraph.so src/graph.o
+	sudo cp src/graph.h /usr/include
+	sudo chmod 0755 /usr/include/graph.h
 	sudo cp src/libgraph.so /usr/lib
 	sudo chmod 0755 /usr/lib/libgraph.so
 	sudo ldconfig

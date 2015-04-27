@@ -18,12 +18,12 @@ int main(int argc, char *argv[]){
 	initnodes();
 	initgui(argc, argv);
 	setShowWeights(1);
-	//makegraph(Graph);
+	makegraph(Graph);
 	
 	gedge** krusc = initialise();
 	krusc = kruscal(Graph);
 	printer(krusc);
-	makegraph(krusc);
+	//makegraph(krusc);
 	
 	/*
 	printmtx(Graph);
