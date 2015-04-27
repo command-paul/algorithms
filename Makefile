@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS= -Wall -Werror -g -c -o
-OBJECTS = src/main.o src/sort.o src/search.o src/misc.o src/libgraph.so
+OBJECTS = src/main.o src/sort.o src/search.o src/misc.o
 TARGETS = csd201 
 TESTS = tests/sort.o
 
@@ -27,6 +27,7 @@ test: $(OBJECTS)
 
 packages:
 	sudo apt-get install freeglut3 freeglut3-dev
+	sudo apt-get install libsoil-dev
 
 graph:
 	$(CC) -c -fpic -o src/graph.o src/graph.c -lglut -lSOIL -lGL -lGLU -lm
