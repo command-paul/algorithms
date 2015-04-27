@@ -16,11 +16,17 @@ Now extract the file
 Change directory to the algorithms folder
 `cd algorithms-master`
 
-Now make the file
-`make`
+Let us first install the packages
+`make packages`
+
+Now make the required graph library
+`make graph`
+
+Edit the src/testgraph.c and run
+`make makegraph`
 
 Now you can run the executable
-`./csd201<`
+`./csd201`
 
 ## Usage
 
