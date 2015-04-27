@@ -1,8 +1,7 @@
 #include "graph.h"
 
-void setNodes(){
-	printf("Please enter the number of nodes you want: ");
-	scanf("%lf", &nodes);
+void setNodes(double n){
+	nodes = n;
 }
 
 gedge** initialise(){
@@ -38,6 +37,14 @@ void setShowWeights(int val){
 		showWeights = 1;
 	else
 		showWeights = 0;
+}
+
+void setSaveScreen(int val){
+	if(val){
+		saveScreen = 1;
+	} else {
+		saveScreen = 0;
+	}
 }
 
 void initgui(int argc, char *argv[]){
@@ -186,7 +193,9 @@ void cb_display( void )
     		glEnd();
    		  	}*/    	   		   	
    		}
-    screenshot();
+   	if(saveScreen){
+   		screenshot();
+   	}
     glFlush();
     glutSwapBuffers( );
 }

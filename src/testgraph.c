@@ -1,10 +1,10 @@
-#include "graph.h"
+#include <graph.h>
 
 int main(int argc, char *argv[]){
 	//initnodes();
 	//initgui(argc, argv);
 	//makegraph();
-	setNodes();
+	setNodes(5);
 	Graph = initialise();
 	addedge(Graph,0,1,0,2);
 	addedge(Graph,1,2,0,3);
@@ -18,6 +18,7 @@ int main(int argc, char *argv[]){
 	initnodes();
 	initgui(argc, argv);
 	setShowWeights(1);
+	setSaveScreen(0);
 	makegraph(Graph);
 	
 	gedge** krusc = initialise();
