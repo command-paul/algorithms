@@ -28,8 +28,8 @@ int main(int argc, char *argv[]){
 	addedge(Graph,4,1,0,1);
 	addedge(Graph,2,4,0,7);
 //Printing the graph on the screen in adjcency matrix format
-	printer(Graph);
-
+	//printer(Graph);
+	printmtx(Graph);
 //Graphical Functions
 
 //Finding locations of all the nodes on the screen
@@ -38,7 +38,7 @@ int main(int argc, char *argv[]){
 	setShowWeights(1);
 //Save screenshot in bmp format or not
 	setSaveScreen(0);
-//If setWindowSize is 1, it would ask the user the dimensions of window.
+//If setWindowSize is 1, it would ask the user the dimensions of window
 	setWindowSize(0);
 //For screen settings. Third parameter is the name of the window
 	initgui(argc, argv, "My Graph Window");

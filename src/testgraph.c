@@ -28,8 +28,8 @@ int main(int argc, char *argv[]){
 	addedge(Graph,4,1,0,1);
 	addedge(Graph,2,4,0,7);
 //Printing the graph on the screen in adjcency matrix format
-	printer(Graph);
-
+	//printer(Graph);
+	printmtx(Graph);
 //Graphical Functions
 
 //Finding locations of all the nodes on the screen
@@ -43,7 +43,7 @@ int main(int argc, char *argv[]){
 //For screen settings. Third parameter is the name of the window
 	initgui(argc, argv, "My Graph Window");
 //Make the graph on screen in visual format
-	makegraph(Graph);
+	//makegraph(Graph);
 
 //Make another graph for kruskals
 	gedge** krusc = initialise();
@@ -51,7 +51,7 @@ int main(int argc, char *argv[]){
 	krusc = kruscal(Graph);
 //Print the minimum spanning tree
 	printer(krusc);
-	//makegraph(krusc);
+	makegraph(krusc);
 	
 	/*
 	printmtx(Graph);

@@ -94,8 +94,8 @@ void quickSort (int *arr, int n) {
         arr[i] = arr[j];
         arr[j] = t;
     }
-    quick_sort(arr, i);
-    quick_sort(arr + i, n - i);
+    quickSort(arr, i);
+    quickSort(arr + i, n - i);
 }
 
 void bubbleSort (int *arr, int n) {

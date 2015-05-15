@@ -127,15 +127,4 @@ void selectionSort (int *arr, int n) {
     }
 }
 
-void shellSort (int *arr, int n) {
-    int h, i, j, t;
-    for (h = n; h /= 2;) {
-        for (i = h; i < n; i++) {
-            t = arr[i];
-            for (j = i; j >= h && t < arr[j - h]; j -= h) {
-                arr[j] = arr[j - h];
-            }
-            arr[j] = t;
-        }
-    }
-}
+
