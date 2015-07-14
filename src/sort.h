@@ -88,18 +88,5 @@ void bubbleSort (int *arr, int n);
  */
 void selectionSort (int *arr, int n);
 
-/*!
- * \brief For sorting an integer array of length n using shell Sort
- *
- * Example Usage: int arr[] = {4, 65, 2, -31, 0, 99, 2, 83, 782, 1};int n = sizeof arr / sizeof arr[0];shellSort(arr, n);
- *
- * \param[in] [int *arr] [integer array to sort]
- * \param[in] [int n] [length of array]
- * \param[out] [void] [array is now sorted]
- * \return [void]
- * \sa insertionSort, mergeSort, bubbleSort, selectionSort
- * \note None
- * \warning None
- */
-void shellSort (int *arr, int n);
+
 #endif

@@ -6,7 +6,7 @@
  *
  * This file contains function declarations for various types of sorting functions
  *
- *\todo Add time complexity for each sort function
+ *\todo Add time complexity for each sort function in their documentation
  */
 #ifndef SORT_H_
 #define SORT_H_
