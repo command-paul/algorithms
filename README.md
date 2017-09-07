@@ -1,10 +1,14 @@
 # Project Name
 
-CSD201 Algos
+CSD201 Algos - GraphWiz
 
 ## About
 
-Our Project is an extensive collection of implementations of a lot of Data structures and associated algorithms which can be easily appended and used in projects. It can be used as Teaching aid for a Data - Structures and Algorithms Course.
+Our Project is an extensive collection of implementations of Abstract Data Types and associated algorithms which can be easily appended and used in projects. It can be used as Teaching aid for a Data - Structures and Algorithms Course.
+
+Also contains a Graph Visualization Utility which can generate graph projections like this one.
+
+![alt text](https://raw.githubusercontent.com/command-paul/algorithms/master/a.bmp "Sample Directed Graph")
 
 ## Installation
 
